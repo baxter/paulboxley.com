@@ -1,13 +1,13 @@
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, del, em, img, ins, dl, dt, dd, ol, ul, li, header, article, footer, nav {
-	margin: 0;
-	padding: 0;
+	background: transparent;
 	border: 0;
-	outline: 0;
 	font-size: 100%;
 	font-weight: normal;
 	font-weight: lighter;
+	margin: 0;
+	outline: 0;
+	padding: 0;
 	vertical-align: baseline;
-	background: transparent;
 }
 
 body {
@@ -50,6 +50,7 @@ header nav li {
 
 header img {
   box-shadow: 20px 20px 0px black;
+  -moz-box-shadow: 2px 2px 4px #888888;
   -webkit-box-shadow: 2px 2px 4px #888888;
   border-left-width: 8px;
   border-bottom-width: 20px;
@@ -60,5 +61,6 @@ header img {
   display: block;
   float: right;
   transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
 }
