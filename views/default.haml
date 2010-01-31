@@ -1,0 +1,28 @@
+!!!
+%html{ :lang => "" }
+  %head
+    %meta{ :charset => "utf-8" }
+    %title
+      Paul Boxley
+    %meta{ :name => "description", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :name => "robots", :content => "" }
+    %link{ :type => "text/css", :rel => "stylesheet", :href => "style.css" }
+    %script{ :src => "http://use.typekit.com/wri1cev.js", :type => "text/javascript" }
+    %script{ :type => "text/javascript" }
+      try{Typekit.load();}catch(e){}
+  %body
+    #wrapper
+      %header
+        %img{ :src => "http://dummyimage.com/100x100" }
+        %h1
+          Paul Boxley
+        %nav
+          %ul
+            %li
+              %a{ :href => "/" }
+                index
+      %article
+        %h2
+          #{@title}
+        #{@content}
