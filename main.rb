@@ -5,6 +5,10 @@ require 'bluecloth'
 
 set :haml, {:format => :html5 }
 
+before do
+  response.headers['Cache-Control'] = 'public, max-age=31557600'
+end
+
 def page ( page_name )
   begin
     @content = BlueCloth.new(File.read("pages/#{page_name}.md")).to_html
