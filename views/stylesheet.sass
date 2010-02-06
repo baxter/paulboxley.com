@@ -1,9 +1,11 @@
 !background_color = white
 !shadow_color     = #888888
+// create a drop shadow
 =drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
   box-shadow: #{!left} #{!right} #{!size} #{!color}
   -moz-box-shadow: #{!left} #{!right} #{!size} #{!color}
   -webkit-box-shadow: #{!left} #{!right} #{!size} #{!color}
+// rotate the object by a number of degrees
 =rotate(!degrees)
   transform: rotate(#{!degrees})
   -moz-transform: rotate(#{!degrees})
@@ -20,41 +22,32 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acro
   padding: 0
   vertical-align: baseline
 
-
 body
   background = !background_color
   font-size: 14pt
 
-
 header, article, footer, nav
   display: block
-
 
 header, article, footer
   margin-bottom: 30px
 
-
 h1
   font-size: 2em
-
 
 h2
   font-size: 1.6em
 
-
 strong
   font-weight: 400
-
 
 #wrapper
   margin: auto
   padding: 10px
   width: 960px
 
-
 h1, h2, header nav li, article > *, footer > *
   margin: 10px
-
 
 header
   h1
@@ -64,7 +57,6 @@ header
     display: inline
 
   img
-    +drop_shadow()
     border:
       style: solid
       color = !background_color
@@ -74,4 +66,5 @@ header
       top-width: 8px
     display: block
     float: right
+    +drop_shadow()
     +rotate("3deg")
