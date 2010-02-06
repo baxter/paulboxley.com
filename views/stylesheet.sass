@@ -1,0 +1,77 @@
+!background_color = white
+!shadow_color     = #888888
+=drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
+  box-shadow: #{!left} #{!right} #{!size} #{!color}
+  -moz-box-shadow: #{!left} #{!right} #{!size} #{!color}
+  -webkit-box-shadow: #{!left} #{!right} #{!size} #{!color}
+=rotate(!degrees)
+  transform: rotate(#{!degrees})
+  -moz-transform: rotate(#{!degrees})
+  -webkit-transform: rotate(#{!degrees})
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, del, em, img, ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
+  background: transparent
+  border: 0
+  font:
+    size: 100%
+    weight: 200
+  margin: 0
+  outline: 0
+  padding: 0
+  vertical-align: baseline
+
+
+body
+  background = !background_color
+  font-size: 14pt
+
+
+header, article, footer, nav
+  display: block
+
+
+header, article, footer
+  margin-bottom: 30px
+
+
+h1
+  font-size: 2em
+
+
+h2
+  font-size: 1.6em
+
+
+strong
+  font-weight: 400
+
+
+#wrapper
+  margin: auto
+  padding: 10px
+  width: 960px
+
+
+h1, h2, header nav li, article > *, footer > *
+  margin: 10px
+
+
+header
+  h1
+    border-bottom: 1px solid black
+
+  nav li
+    display: inline
+
+  img
+    +drop_shadow()
+    border:
+      style: solid
+      color = !background_color
+      left-width: 8px
+      bottom-width: 20px
+      right-width: 8px
+      top-width: 8px
+    display: block
+    float: right
+    +rotate("3deg")

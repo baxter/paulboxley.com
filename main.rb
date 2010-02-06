@@ -3,7 +3,8 @@ require 'sinatra'
 require 'haml'
 require 'bluecloth'
 
-set :haml, {:format => :html5 }
+set :haml, { :format => :html5 }
+set :sass, { :style  => :expanded }
 
 before do
   response.headers['Cache-Control'] = 'public, max-age=31557600'
@@ -21,6 +22,11 @@ end
 
 get '/' do
   page("index")
+end
+
+get '/style.css' do
+  header 'Content-type' => 'text/css; charset=utf-8'
+  sass :stylesheet
 end
 
 get '/:page' do
