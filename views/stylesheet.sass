@@ -1,5 +1,8 @@
 !background_color = white
 !shadow_color     = #888888
+!link_color       = #44f
+!active_color     = #f44
+
 // create a drop shadow
 =drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
   box-shadow: #{!left} #{!right} #{!size} #{!color}
@@ -24,7 +27,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acro
 
 body
   background = !background_color
-  font-size: 14pt
+  font:
+    family: Gesta, sans-serif
+    size: 14pt
 
 header, article, footer, nav
   display: block
@@ -41,12 +46,26 @@ h2
 strong
   font-weight: 400
 
+a
+  color = !link_color
+  padding: 2px 3px 1px
+  border: 1px dotted
+  
+  &:hover, &:active
+    color: white
+    
+  &:hover
+    background = !link_color
+    
+  &:active
+    background = !active_color
+
 #wrapper
   margin: auto
   padding: 10px
   width: 960px
 
-h1, h2, header nav li, article > *, footer > *
+h1, h2, header nav ul, article > *, footer > *
   margin: 10px
 
 header
@@ -68,3 +87,7 @@ header
     float: right
     +drop_shadow()
     +rotate("3deg")
+
+article
+  p
+    line-height: 1.2em
