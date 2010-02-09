@@ -11,28 +11,28 @@ before do
 end
 
 def page ( page_name )
+  @page_name = page_name
   begin
     @content = BlueCloth.new(File.read("pages/#{page_name}.md")).to_html
   rescue
     raise Sinatra::NotFound
   end
-  @title = page_name
   haml :default
 end
 
 get '/' do
-  page("index")
+  redirect '/index', 301
 end
 
 get '/style.css' do
-  header 'Content-type' => 'text/css; charset=utf-8'
+  headers 'Content-type' => 'text/css; charset=utf-8'
   sass :stylesheet
 end
 
 get '/:page' do
-  page(params[:page])
+  page params[:page]
 end
 
 not_found do
-  page("404")
+  page '404'
 end
