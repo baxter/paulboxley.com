@@ -5,6 +5,7 @@
     %title
       Paul Boxley
     %link{ :type => "text/css", :rel => "stylesheet", :href => "style.css" }
+    // %link{ :rel  => "canonical", :href => "http://paulboxley.com/#{@page_name}" }
     %script{ :src => "http://use.typekit.com/wri1cev.js", :type => "text/javascript" }
     %script{ :type => "text/javascript" }
       try{Typekit.load();}catch(e){}
@@ -24,5 +25,5 @@
               %a{ :href => "/elsewhere" } elsewhere
       %article
         %h2
-          #{@title}
+          #{@page_name}
         #{@content}
