@@ -8,7 +8,6 @@ set :haml, { :format => :html5 }
 set :sass, { :style  => :expanded }
 
 before do
-  # response.headers['Cache-Control'] = 'public, max-age=31557600'
   headers 'Cache-Control' => 'public, max-age=31557600'
 end
 
