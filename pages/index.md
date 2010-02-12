@@ -1,6 +1,6 @@
 I'm Paul Boxley, a software developer living in Edinburgh. I'm passionate about helping people to solve their problems and I like working with people that share my passion.
 
-I love programming languages, especially ones that are expressive and terse. I prefer [essence over ceremony][Bini-Typing].
+I love programming languages that are expressive and terse. I prefer [essence over ceremony][Bini-Typing].
 
 I like my tools to be lightweight and to perform a single task very well.
 
