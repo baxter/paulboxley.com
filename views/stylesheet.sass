@@ -5,14 +5,14 @@
 
 // create a drop shadow
 =drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
-  box-shadow: #{!left} #{!right} #{!size} #{!color}
-  -moz-box-shadow: #{!left} #{!right} #{!size} #{!color}
-  -webkit-box-shadow: #{!left} #{!right} #{!size} #{!color}
+  box-shadow = !left !right !size !color
+  -moz-box-shadow = !left !right !size !color
+  -webkit-box-shadow = !left !right !size !color
 // rotate the object by a number of degrees
 =rotate(!degrees)
-  transform: rotate(#{!degrees})
-  -moz-transform: rotate(#{!degrees})
-  -webkit-transform: rotate(#{!degrees})
+  transform = rotate(!degrees)
+  -moz-transform = rotate(!degrees)
+  -webkit-transform = rotate(!degrees)
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, del, em, img, ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
   background: transparent
