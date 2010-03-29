@@ -2,6 +2,6 @@ I'm Paul Boxley, a software developer living in Edinburgh. I'm passionate about 
 
 I love programming languages that are expressive and terse. I prefer [essence over ceremony][Bini-Typing].
 
-I like my tools to be lightweight and to perform a single task very well.
+I like lightweight tools that perform a single task very well.
 
  [Bini-Typing]: http://olabini.com/blog/2008/04/pragmatic-static-typing/
