@@ -24,6 +24,4 @@
             %li
               %a{ :href => "/elsewhere" } elsewhere
       %article
-        %h2
-          #{@page_name}
-        #{@content}
+        = yield
