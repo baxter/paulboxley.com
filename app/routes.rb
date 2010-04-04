@@ -7,10 +7,6 @@ get '/style.css' do
   sass :stylesheet
 end
 
-get '/blog' do
-  "BLOG!"
-end
-
 get '/:page' do
   page params[:page]
 end
