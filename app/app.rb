@@ -3,6 +3,7 @@ require 'haml'
 require 'sass'
 require 'bluecloth'
 require 'app/models/page'
+require 'app/models/post'
 require 'app/routes'
 
 set :haml, { :format => :html5 }
@@ -15,8 +16,15 @@ before do
 end
 
 def page ( page_name )
-  page = Page.new(page_name)
-  @page_name = page.name
+  page = Page.new(:name => page_name)
+  @title = page.name
   @content = page.html
+  haml :default
+end
+
+def post ( options={} )
+  post = Post.new(options)
+  @title = post.title
+  @content = post.html
   haml :default
 end
