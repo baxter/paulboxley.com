@@ -2,6 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'bluecloth'
+require 'app/models/page'
 require 'app/routes'
 
 set :haml, { :format => :html5 }
@@ -14,11 +15,8 @@ before do
 end
 
 def page ( page_name )
-  @page_name = page_name
-  begin
-    @content = BlueCloth.new(File.read("content/pages/#{page_name}.md")).to_html
-  rescue
-    raise Sinatra::NotFound
-  end
+  page = Page.new(page_name)
+  @page_name = page.name
+  @content = page.html
   haml :default
 end

@@ -1,17 +1,7 @@
-require 'sinatra/base'
-require 'bluecloth'
+require 'app/models/file_model'
 
-class Page
-  def initialize(name)
-    @name = name
-    begin
-      @content = File.read(File.join("content","pages","#{page_name}.md"))
-    rescue
-      raise Sinatra::NotFound
-    end
-  end
-  
-  def html
-    BlueCloth.new(@content).to_html
+class Page < FileModel  
+  def file_location(name)
+    File.join("content","pages","%s.md") % name
   end
 end
