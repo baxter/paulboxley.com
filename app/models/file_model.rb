@@ -9,7 +9,7 @@ class FileModel
     @name = options[:name]
     @metadata = {}
     
-    matches = Dir.glob(file_location(options))
+    matches = Dir.glob(self.file_location(options))
     if matches.empty?
       raise Sinatra::NotFound
     end
@@ -38,8 +38,8 @@ class FileModel
   def html
     BlueCloth.new(@content).to_html
   end
-  
-  def file_location
-    nil
+
+  def file_location(options={})
+    self.class.file_location(options)
   end
 end
