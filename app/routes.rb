@@ -8,9 +8,8 @@ get '/style.css' do
 end
 
 get '/blog' do
-  Post.list().inject do |post|
-    post.html
-  end
+  @posts = Post.list.sort { |a,b| b <=> a }
+  haml :blog
 end
 
 get '/blog/:year/:month/:name' do
