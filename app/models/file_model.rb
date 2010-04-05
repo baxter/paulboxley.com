@@ -1,11 +1,16 @@
 require 'sinatra/base'
 require 'bluecloth'
 
+
 class FileModel
   def initialize(options={})
+    
+    # If one of the options is the path to the file then we can determine 
+    # the name
     if options[:path]
-      options[:name] = %r{([a-z0-9\-]+).md}.match(options[:path])[1]
+      options[:name] ||= %r{([a-z0-9\-]+).md}.match(options[:path])[1]
     end
+    
     @name = options[:name]
     @metadata = {}
     
@@ -27,8 +32,20 @@ class FileModel
     end
   end
   
+  def validate(options={})
+    true
+  end
+  
   def name
     @name
+  end
+  
+  def title
+    if metadata('title').nil?
+      name
+    else
+      metadata 'title'
+    end
   end
   
   def metadata(key)
@@ -39,6 +56,9 @@ class FileModel
     BlueCloth.new(@content).to_html
   end
 
+  # The location of this resource on the filesystem.
+  # Subclasses of FileModel should implement a class method called
+  # file_location. 
   def file_location(options={})
     self.class.file_location(options)
   end

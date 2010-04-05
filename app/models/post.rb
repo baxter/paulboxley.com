@@ -10,15 +10,12 @@ class Post < FileModel
     end
     
     def file_location(options={})
-      File.join("content","posts","%s","%s","%s.md") % [options[:year] || "**",options[:month] || "**",options[:name] || "*"]
-    end
-  end
-  
-  def title
-    if metadata('title').nil?
-      @name
-    else
-      metadata 'title'
+      File.join("content","posts","%s","%s","%s.md") % 
+      [
+        options[:year]  || "**",
+        options[:month] || "**",
+        options[:name]  || "*"
+      ]
     end
   end
   
@@ -27,7 +24,11 @@ class Post < FileModel
   end
   
   def posted
-    Time.parse(metadata 'posted')
+    if metadata('posted').nil?
+      nil
+    else
+      Time.parse(metadata 'posted')
+    end
   end
   
   def modified
