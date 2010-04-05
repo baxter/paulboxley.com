@@ -12,7 +12,7 @@ set :sass, { :style  => :expanded }
 set :public, Proc.new { File.join("content", "static") }
 
 before do
-  headers 'Cache-Control' => 'public, max-age=31557600'
+  headers 'Cache-Control' => 'public, max-age=3600'
 end
 
 def page ( page_name )
