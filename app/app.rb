@@ -17,7 +17,7 @@ end
 
 def page ( page_name )
   page = Page.new(:name => page_name)
-  @title = page.name
+  @title = page.title
   @content = page.html
   haml :default
 end
