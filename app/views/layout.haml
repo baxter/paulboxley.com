@@ -5,7 +5,6 @@
     %title
       Paul Boxley
     %link{ :type => "text/css", :rel => "stylesheet", :href => "/style.css" }
-    // %link{ :rel  => "canonical", :href => "http://paulboxley.com/#{@page_name}" }
     %script{ :src => "http://use.typekit.com/wri1cev.js", :type => "text/javascript" }
     %script{ :type => "text/javascript" }
       try{Typekit.load();}catch(e){}
@@ -18,10 +17,6 @@
         %h1
           Paul Boxley
         %nav
-          %ul
-            %li
-              %a{ :href => "/index" } index
-            %li
-              %a{ :href => "/elsewhere" } elsewhere
+          = haml :navigation, :layout => false
       %article
         = yield
