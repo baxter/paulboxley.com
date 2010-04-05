@@ -1,18 +1,4 @@
-!background_color = white
-!shadow_color     = #888888
-!link_color       = #44f
-!active_color     = #f44
-
-// create a drop shadow
-=drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
-  box-shadow = !left !right !size !color
-  -moz-box-shadow = !left !right !size !color
-  -webkit-box-shadow = !left !right !size !color
-// rotate the object by a number of degrees
-=rotate(!degrees)
-  transform = rotate(!degrees)
-  -moz-transform = rotate(!degrees)
-  -webkit-transform = rotate(!degrees)
+@import helpers.sass
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, del, em, img, ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
   background: transparent
@@ -50,7 +36,6 @@ a
   color = !link_color
   padding: 2px 3px 1px
   border: 1px dotted
-  //white-space: nowrap
   
   &:hover, &:active, &:focus
     color: white
@@ -65,7 +50,6 @@ a
   margin: auto
   padding: 10px
   width: 760px
-  //width: 960px
 
 h1, h2, header nav ul, article > *, footer > *
   margin: 10px

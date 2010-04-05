@@ -1,0 +1,15 @@
+!background_color = white
+!shadow_color     = #888888
+!link_color       = #44f
+!active_color     = #f44
+
+// create a drop shadow
+=drop_shadow(!left = 2px, !right = 2px, !size = 4px, !color = !shadow_color)
+  box-shadow = !left !right !size !color
+  -moz-box-shadow = !left !right !size !color
+  -webkit-box-shadow = !left !right !size !color
+// rotate the object by a number of degrees
+=rotate(!degrees)
+  transform = rotate(!degrees)
+  -moz-transform = rotate(!degrees)
+  -webkit-transform = rotate(!degrees)
