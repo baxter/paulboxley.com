@@ -6,4 +6,7 @@
     %span.posted
       Posted
       = post.posted.strftime "%Y-%m-%d"
+      @
+      = post.posted.strftime "%H:%M"
+      UTC
     = post.html

@@ -1,5 +1,5 @@
 get '/' do
-  redirect '/about', 301
+  redirect '/blog', 301
 end
 
 get '/style.css' do
