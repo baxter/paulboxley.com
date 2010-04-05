@@ -1,6 +1,8 @@
 @import helpers.sass
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, del, em, img, ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, cite, code, del, em, img,
+ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
   background: transparent
   border: 0
   font:
@@ -19,9 +21,6 @@ body
 
 header, article, footer, nav
   display: block
-
-header, article, footer
-  margin-bottom: 30px
 
 h1
   font-size: 2em
@@ -51,8 +50,14 @@ a
   padding: 10px
   width: 760px
 
-h1, h2, header nav ul, article > *, footer > *
-  margin: 10px
+h1
+  margin: 10px 0
+
+h2, article > *, footer > *
+  margin: 1em 0 0.5em
+
+article
+  margin: 1em 0
 
 header
   h1
@@ -65,15 +70,21 @@ header
     border:
       style: solid
       color = !background_color
-      left-width: 8px
+      width: 8px
       bottom-width: 20px
-      right-width: 8px
-      top-width: 8px
     display: block
     float: right
     +drop_shadow()
     +rotate("3deg")
 
 article
-  p
-    line-height: 1.2em
+  line-height: 1.2em
+  
+  .posted
+    font-size: 0.75em
+  
+  ul
+    margin: 1em 0
+
+article + article
+  border-top: 1px dotted black
