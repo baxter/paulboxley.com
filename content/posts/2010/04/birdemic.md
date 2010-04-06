@@ -9,7 +9,7 @@ URL: http://news.bbc.co.uk/1/hi/entertainment/8604858.stm?ls
 > It is the story of an invasion of lethal eagles, being
 > celebrated for its awfulness.
 
-* Utterly bizarre special effect
+* Utterly bizarre special effects
 * Weird dialogue
 * Bad acting
 * Repeated jump cuts
