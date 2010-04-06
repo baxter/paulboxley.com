@@ -32,11 +32,11 @@ header, article, footer, nav
 h1
   font-size: 2em
 
-h2
+.internal h2
   font-size: 1.6em
 
-strong
-  font-weight: 400
+.external h2
+  font-size: 1em
 
 a
   color = !link_color
@@ -60,11 +60,8 @@ a
 h1
   margin: 10px 0
 
-h2, article > *, footer > *
+h2, article, article > *, footer > *
   margin: 1em 0 0.5em
-
-article
-  margin: 1em 0
 
 header
   h1
@@ -92,6 +89,15 @@ article
   
   ul
     margin: 1em 0
+  
+  blockquote
+    border-left: 1px dotted black
+    margin-left: 1em
+    padding: 0.5em 1em
+    
+article.external
+  .posted
+    display: none
 
 article + article
   border-top: 1px dotted black

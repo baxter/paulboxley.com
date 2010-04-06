@@ -1,12 +1,19 @@
 -@posts.each do |post|
-  %article
-    %h2
-      %a{ :href => post.url }
-        = post.title
-    %span.posted
-      Posted
-      = post.posted.strftime "%Y-%m-%d"
-      @
-      = post.posted.strftime "%H:%M"
-      UTC
+  %article{ :class => post.external? ? 'external' : 'internal' }
+    %header
+      %h2
+        - if post.external? 
+          %a{ :href => post.url }
+            = post.title
+        - else
+          = post.title
+      %span.permalink
+        // %a{ :href => post.permalink }
+        //  Permalink to <em>'#{post.title}'</em>
+      %span.posted
+        Posted
+        = post.posted.strftime "%Y-%m-%d"
+        @
+        = post.posted.strftime "%H:%M"
+        UTC
     ~ post.html

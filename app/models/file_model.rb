@@ -8,7 +8,7 @@ class FileModel
     # If one of the options is the path to the file then we can determine 
     # the name
     if options[:path]
-      options[:name] ||= %r{([a-z0-9\-]+).md}.match(options[:path])[1]
+      options[:name] ||= %r{([a-z0-9\-_]+).md}.match(options[:path])[1]
     end
     
     @name = options[:name]

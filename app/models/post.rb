@@ -19,7 +19,27 @@ class Post < FileModel
     end
   end
   
+  def external?
+    if url == permalink
+      false
+    else
+      true
+    end
+  end
+  
+  def internal?
+    !external?
+  end
+  
   def url
+    if metadata('url')
+      metadata 'url'
+    else
+      permalink
+    end
+  end
+  
+  def permalink
     "/blog/#{self.year}/#{self.month}/#{self.name}"
   end
   
