@@ -12,6 +12,11 @@ get '/blog' do
   haml :blog
 end
 
+get '/blog/feed.atom' do
+  headers 'Content-type' => 'text/text'
+  builder :blog
+end
+
 get '/blog/:year/:month/:name' do
   post(
     :year => params[:year],

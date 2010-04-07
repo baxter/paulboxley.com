@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'builder'
 require 'bluecloth'
 require 'app/models/page'
 require 'app/models/post'
