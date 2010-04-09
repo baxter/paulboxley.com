@@ -1,6 +1,7 @@
 Title: Scrabble Trickster
 Posted: 2010-04-07 22:52Z
-URL: http://localhost:9393/blog/2010/04/scrabble-trickster
+Modified: 2010-04-09 08:42Z
+URL: http://www.slate.com/blogs/blogs/browbeat/archive/2010/04/06/don-t-panic-proper-nouns-will-not-be-allowed-in-scrabble.aspx
 
 I originally read on kottke.org that Scrabble were introducing new rules that would allow proper nouns. It transpires that this is not the case:
 
