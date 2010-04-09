@@ -8,8 +8,8 @@
         - else
           = post.title
       %span.permalink
-        // %a{ :href => post.permalink }
-        //  Permalink to <em>'#{post.title}'</em>
+        %a{ :href => post.permalink }
+          Permalink to <em>'#{post.title}'</em>
       %span.posted
         Posted
         = post.posted.strftime "%Y-%m-%d"

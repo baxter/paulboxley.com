@@ -12,6 +12,11 @@ get '/blog' do
   haml :blog
 end
 
+get '/blog/feed.atom' do
+  @posts = Post.list.sort { |a,b| b <=> a }
+  builder :blog
+end
+
 get '/blog/:year/:month/:name' do
   post(
     :year => params[:year],
