@@ -9,12 +9,12 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
     :rel => 'alternate', 
     :type => 'text/html', 
     :hreflang => 'en',
-    :href => 'http://paulboxley.com/blog'
+    :href => Blog[:base_url] + 'blog'
   )
   xml.link(
     :rel => 'self', 
     :type => 'application/atom+xml',
-    :href => 'http://paulboxley.com/blog/feed.atom'
+    :href => Blog[:base_url] + 'blog/feed.atom'
   )
   @posts.each do |post|
     xml.entry {
@@ -24,6 +24,13 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
       xml.published(
         post.posted.strftime("%Y-%m-%dT%H:%M:%SZ")
       )
+      xml.author {
+        xml.name("Paul Boxley")
+        xml.url(Blog[:base_url])
+      }
+      xml.content(:type => 'html', "xml:lang" => 'en', "xml:base" => Blog[:base_url]) {
+        xml.cdata!(post.html)
+      }
     }
   end
 }
