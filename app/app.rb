@@ -23,6 +23,16 @@ before do
   headers 'Cache-Control' => 'public, max-age=3600'
 end
 
+def feed ( type )
+  if type != :atom
+    raise Sinatra::NotFound
+  end
+  headers 'Content-type' => 'application/atom+xml'
+  @posts = Post.list.sort { |a,b| b <=> a }
+  @updated = @posts[0].posted.strftime("%Y-%m-%dT%H:%M:%SZ")
+  builder :blog
+end
+
 def page ( page_name )
   page = Page.new(:name => page_name)
   @title = page.title
