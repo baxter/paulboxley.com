@@ -14,6 +14,7 @@ end
 
 get '/blog/feed.atom' do
   headers 'Content-type' => 'text/text'
+  @posts = Post.list.sort { |a,b| b <=> a }
   builder :blog
 end
 

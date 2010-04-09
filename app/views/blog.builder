@@ -16,9 +16,14 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
     :type => 'application/atom+xml',
     :href => 'http://paulboxley.com/blog/feed.atom'
   )
-  xml.entry {
-    xml.comment! "HI"
-    xml.h1("Header")
-    xml.p("paragraph")
-  }
+  @posts.each do |post|
+    xml.entry {
+      xml.title(post.title)
+      xml.link(:rel => 'alternate', :type => 'text/html', :href => post.url)
+      xml.id(post.permalink)
+      xml.published(
+        post.posted.strftime("%Y-%m-%dT%H:%M:%SZ")
+      )
+    }
+  end
 }
