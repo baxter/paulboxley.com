@@ -63,7 +63,7 @@ h1
 h2, article, article > *, footer > *
   margin: 1em 0 0.5em
 
-header
+#wrapper > header
   h1
     border-bottom: 1px solid black
 
@@ -84,6 +84,22 @@ header
 article
   line-height: 1.2em
   
+  .permalink
+    margin-left: -30px
+    a
+      text-decoration: none
+      background: 
+        image:    url('/link.png')
+        repeat:   no-repeat 
+        position: 0 0
+      padding: 0 7px
+      
+      &:hover
+        background: 
+          image:    url('/link.png')
+          repeat:   no-repeat 
+          position: 0 -20px
+  
   .posted
     font-size: 0.75em
   
@@ -96,6 +112,8 @@ article
     padding: 0.5em 1em
     
 article.external
+  .permalink
+    margin-left: -27px
   .posted
     display: none
 

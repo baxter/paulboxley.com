@@ -2,14 +2,13 @@
   %article{ :class => post.external? ? 'external' : 'internal' }
     %header
       %h2
-        - if post.external? 
+        %span.permalink
+          %a{ :href => post.permalink, :title => "Permalink to '#{post.title}'" } &nbsp;
+        - if post.external?           
           %a{ :href => post.url }
             = post.title
         - else
           = post.title
-      %span.permalink
-        %a{ :href => post.permalink }
-          Permalink to <em>'#{post.title}'</em>
       %span.posted
         Posted
         = post.posted.strftime "%Y-%m-%d"
