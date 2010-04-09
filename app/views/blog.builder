@@ -1,10 +1,8 @@
-xml.instruct! :xml, :version => '1.1', :encoding => 'utf-8'
+xml.instruct! :xml, :version => '1.0', :encoding => 'utf-8'
 xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
-  xml.head {
-    xml.title("PaulBoxley.com", :type => 'text')
-  }
-  xml.updated("UPDATED")
-  xml.id("ID")
+  xml.title("PaulBoxley.com", :type => 'text')
+  xml.updated(@updated)
+  xml.id(Blog[:base_url] + 'blog/feed.atom')
   xml.link(
     :rel => 'alternate', 
     :type => 'text/html', 
@@ -24,9 +22,12 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
       xml.published(
         post.posted.strftime("%Y-%m-%dT%H:%M:%SZ")
       )
+      xml.updated(
+        post.modified.strftime("%Y-%m-%dT%H:%M:%SZ")
+      )
       xml.author {
         xml.name("Paul Boxley")
-        xml.url(Blog[:base_url])
+        xml.uri(Blog[:base_url])
       }
       xml.content(:type => 'html', "xml:lang" => 'en', "xml:base" => Blog[:base_url]) {
         xml.cdata!(post.html)
