@@ -40,9 +40,7 @@ def page ( page_name )
   haml :default
 end
 
-def post ( options={} )
-  post = Post.new(options)
-  @title = post.title
-  @content = post.html
-  haml :default
+def blog ( options={} )
+  @posts = Post.list(options).sort { |a,b| b <=> a }
+  haml :blog
 end
