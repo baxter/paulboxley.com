@@ -2,17 +2,17 @@ xml.instruct! :xml, :version => '1.0', :encoding => 'utf-8'
 xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
   xml.title("PaulBoxley.com", :type => 'text')
   xml.updated(@updated)
-  xml.id(Blog[:base_url] + 'blog/feed.atom')
+  xml.id(Site[:base_url] + 'blog/feed.atom')
   xml.link(
     :rel => 'alternate', 
     :type => 'text/html', 
     :hreflang => 'en',
-    :href => Blog[:base_url] + 'blog'
+    :href => Site[:base_url] + 'blog'
   )
   xml.link(
     :rel => 'self', 
     :type => 'application/atom+xml',
-    :href => Blog[:base_url] + 'blog/feed.atom'
+    :href => Site[:base_url] + 'blog/feed.atom'
   )
   @posts.each do |post|
     xml.entry {
@@ -27,9 +27,9 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
       )
       xml.author {
         xml.name("Paul Boxley")
-        xml.uri(Blog[:base_url])
+        xml.uri(Site[:base_url])
       }
-      xml.content(:type => 'html', "xml:lang" => 'en', "xml:base" => Blog[:base_url]) {
+      xml.content(:type => 'html', "xml:lang" => 'en', "xml:base" => Site[:base_url]) {
         xml.cdata!(post.html)
       }
     }

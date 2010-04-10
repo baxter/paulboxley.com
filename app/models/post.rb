@@ -40,7 +40,7 @@ class Post < FileModel
   end
   
   def permalink
-    Blog[:base_url].gsub(/\/$/,'') + "/blog/#{self.year}/#{self.month}/#{self.name}"
+    Site[:base_url].gsub(/\/$/,'') + "/blog/#{self.year}/#{self.month}/#{self.name}"
   end
   
   def posted
