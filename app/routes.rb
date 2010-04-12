@@ -7,17 +7,29 @@ get '/style.css' do
   sass :stylesheet
 end
 
-get '/blog' do
-  @posts = Post.list.sort { |a,b| b <=> a }
-  haml :blog
-end
-
 get '/blog/feed.atom' do
   feed :atom
 end
 
+get '/blog' do
+  blog
+end
+
+get '/blog/:year' do
+  blog(
+    :year => params[:year]
+  )
+end
+
+get '/blog/:year/:month' do
+  blog(
+    :year => params[:year],
+    :month => params[:month]
+  )
+end
+
 get '/blog/:year/:month/:name' do
-  post(
+  blog(
     :year => params[:year],
     :month => params[:month],
     :name => params[:name]

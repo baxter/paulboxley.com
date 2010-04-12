@@ -13,7 +13,7 @@ set :sass, { :style  => :expanded }
 set :public, Proc.new { File.join("content", "static") }
 
 configure do
-  Blog = {
+  Site = {
     :title => 'Paul Boxley',
     :base_url => ENV['RACK_ENV'] == 'development' ? 'http://localhost:9393/' : 'http://paulboxley.com/',
   }
@@ -40,9 +40,7 @@ def page ( page_name )
   haml :default
 end
 
-def post ( options={} )
-  post = Post.new(options)
-  @title = post.title
-  @content = post.html
-  haml :default
+def blog ( options={} )
+  @posts = Post.list(options).sort { |a,b| b <=> a }
+  haml :blog
 end
