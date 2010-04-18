@@ -6,9 +6,9 @@ get '/index' do
   redirect '/blog', 301
 end
 
-get '/style.css' do
+get '/:style.css' do
   headers 'Content-type' => 'text/css; charset=utf-8'
-  sass :stylesheet
+  sass params[:style].to_sym
 end
 
 get '/blog/feed.atom' do
