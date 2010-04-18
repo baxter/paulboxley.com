@@ -6,6 +6,10 @@ get '/index' do
   redirect '/blog', 301
 end
 
+get '/stylesheet.css' do
+  redirect '/style.css', 301
+end
+
 get '/:style.css' do
   headers 'Content-type' => 'text/css; charset=utf-8'
   sass params[:style].to_sym
