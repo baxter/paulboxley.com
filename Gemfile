@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem "tilt"
 gem "sinatra"
 gem "haml"
 gem "builder"
