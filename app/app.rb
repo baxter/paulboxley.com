@@ -41,6 +41,9 @@ def page ( page_name )
 end
 
 def blog ( options={} )
-  @posts = Post.list(options).sort { |a,b| b <=> a }
+  options[:limit] ||= 100
+  # Limiting posts -after- the array has been built is inefficient
+  # but its impact seems to be negligible for now.
+  @posts = Post.list(options).sort { |a,b| b <=> a }[0...options[:limit]]
   haml :blog
 end
