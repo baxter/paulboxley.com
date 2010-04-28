@@ -26,7 +26,7 @@ class FileModel
     #   Key: Value
     # into an entry in a hash called @metadata.
     # Exclude any lines that start with a double slash.
-    metadata_string.split("\n").reject { |x| x =~ %r{^//.*} }.each do |line|
+    metadata_string.split(/\n|\r/).reject { |x| x =~ %r{^//.*} }.each do |line|
       key, value = line.split(/\s*:\s*/, 2)
       @metadata[key.downcase] = value
     end
