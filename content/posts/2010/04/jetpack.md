@@ -1,1 +1,1 @@
-Title:  JetpackPosted: 2010-04-28 18:05ZURL:    http://www.gizmag.com/first-commercially-available-jetpack/14423/Jetpack!(Via [Hacker News][1])	[1]: http://news.ycombinator.com/item?id=1297765
+Title:  JetpackPosted: 2010-04-28 18:05ZURL:    http://www.gizmag.com/first-commercially-available-jetpack/14423/Jetpack!(Via [Hacker News][1])  [1]: http://news.ycombinator.com/item?id=1297765
