@@ -3,7 +3,8 @@
   %head
     %meta{ :charset => "utf-8" }
     %title
-      Paul Boxley
+      = @title + ' &mdash; ' unless @title.nil?
+      = Site[:title]
     %link{ :type => "text/css", :rel => "stylesheet", :href => "/style.css" }
     %link{ :type => "application/atom+xml", :rel => "alternate", :href => Site[:base_url] + "blog/feed.atom" }
     %link{ :type => "image/png", :rel => "icon", :href => "/favicon.png" }

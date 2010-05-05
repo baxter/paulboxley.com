@@ -14,7 +14,7 @@ set :public, Proc.new { File.join("content", "static") }
 
 configure do
   Site = {
-    :title => 'Paul Boxley',
+    :title => 'Paul Boxley.com',
     :base_url => ENV['RACK_ENV'] == 'development' ? 'http://localhost:9393/' : 'http://paulboxley.com/',
   }
 end
@@ -45,5 +45,8 @@ def blog ( options={} )
   # Limiting posts -after- the array has been built is inefficient
   # but its impact seems to be negligible for now.
   @posts = Post.list(options).sort { |a,b| b <=> a }[0...options[:limit]]
+  if @posts.size == 1 then
+    @title = @posts[0].title
+  end
   haml :blog
 end
