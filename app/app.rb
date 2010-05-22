@@ -13,10 +13,17 @@ set :sass, { :style  => :expanded }
 set :public, Proc.new { File.join("content", "static") }
 
 configure do
-  Site = {
-    :title => 'Paul Boxley',
-    :base_url => ENV['RACK_ENV'] == 'development' ? 'http://localhost:9393/' : 'http://paulboxley.com/',
-  }
+  if ENV['RACK_ENV'] == 'development' then
+    Site = {
+      :title => 'Paul Boxley – DEVELOPMENT',
+      :base_url => 'http://localhost:9393/',
+    }
+  else
+    Site = {
+      :title => 'Paul Boxley',
+      :base_url => 'http://paulboxley.com',
+    }
+  end
 end
 
 before do
