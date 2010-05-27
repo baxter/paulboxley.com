@@ -5,9 +5,8 @@ class Post < FileModel
   class << self
     def list(options={})
       Dir.glob(self.file_location(options)).collect do |post|
-        p = Post.new(:path => post)
-        p unless p.posted > Time.now.utc
-      end.reject { |post| post.nil? }
+        Post.new(:path => post)
+      end.reject { |post| post.posted > Time.now.utc }
     end
     
     def file_location(options={})
