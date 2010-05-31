@@ -31,6 +31,24 @@ class Post < FileModel
     !external?
   end
   
+  def domain
+    return nil if internal?
+    domain_part = %r{http://[w\.]*([^:/]+)}
+    begin
+      "[#{domain_part.match(url)[1]}]"
+    rescue
+      ""
+    end
+  end
+  
+  def feed_title
+    if internal?
+      title
+    else
+      "#{domain} #{title}"
+    end
+  end
+  
   def url
     if metadata('url')
       metadata 'url'

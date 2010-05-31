@@ -16,7 +16,7 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
   )
   @posts.each do |post|
     xml.entry {
-      xml.title(post.title)
+      xml.title(post.feed_title)
       xml.link(:rel => 'alternate', :type => 'text/html', :href => post.url)
       xml.id(post.permalink)
       xml.published(
