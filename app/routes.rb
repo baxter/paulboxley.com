@@ -17,7 +17,7 @@ end
 
 # Allow FeedBurner access to the real feed
 
-get '/blog/feed.atom', :agent => /FeedBurner.*/ do
+get '/blog/feed.atom' do
   feed :atom
 end
 

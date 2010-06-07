@@ -33,7 +33,7 @@ class Post < FileModel
   
   def domain
     return nil if internal?
-    domain_part = %r{http://[w\.]*([^:/]+)}
+    domain_part = %r{http[s]*://[w\.]*([^:/]+)}
     begin
       "[#{domain_part.match(url)[1]}]"
     rescue
@@ -45,7 +45,7 @@ class Post < FileModel
     if internal?
       title
     else
-      "#{domain} #{title}"
+      "#{title} #{domain}"
     end
   end
   
