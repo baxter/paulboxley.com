@@ -10,7 +10,7 @@ That it features ligatures and multiple language support makes it all the more s
 Despite its charm, the more I see it used the less I want to use it myself. Perhaps its popularity is a double-edged sword.
 
   [museo]:        http://www.josbuivenga.demon.nl/museo.html
-  [museo-img]:    /museo/Museo.png
+  [museo-img]:    http://static.paulboxley.com/museo/Museo.png
   [black-lizars]: http://www.blackandlizars.com/
-  [museo-hits]:   /museo/museo-urban-hits.jpg
+  [museo-hits]:   http://static.paulboxley.com/museo/museo-urban-hits.jpg
   

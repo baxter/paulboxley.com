@@ -8,4 +8,4 @@ of field in this picture from Bulgaria.
 
 ![Bulgaria][1]
 
-  [1]: /bulgaria.jpg
+  [1]: http://static.paulboxley.com/bulgaria.jpg
