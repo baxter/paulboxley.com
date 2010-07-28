@@ -1,0 +1,53 @@
+@import helpers.sass
+
+!single_col_size  = 300px
+!margin_size      = 15px
+!padding_size     = 15px
+!border_size      = 0
+
+!single_col_width = (!single_col_size)     - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
+!double_col_width = (!single_col_size * 2) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
+
+body
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+  font-size: 9pt
+  background: #888
+
+h1
+  color: white
+  font-weight: normal
+
+h2
+  margin: 0 0 .5em 0
+
+pre
+  margin: 0 0.5em 0 1em
+  padding: 0 0 0 1em
+
+blockquote
+  margin: 0 0.5em 0 1em
+  padding: 0 0 0 1em
+  border-left: 2px dotted #bbb
+
+article
+  background: white
+  float: left
+  margin: !margin_size
+  padding: !padding_size
+  width: !single_col_width
+  +border_radius(20px)
+  +drop_shadow(0,0,4px,#222)
+
+article.internal
+  width: !double_col_width
+  img, object
+    max-width: !double_col_width
+
+article.external
+  img, object
+    max-width: !single_col_width
+  h2
+    font-size: 1.25em
+    font-weight: normal
+    padding-bottom: 0.5em
+    border-bottom: 1px solid #222

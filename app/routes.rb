@@ -31,6 +31,10 @@ get '/blog' do
   blog
 end
 
+get '/masonry' do
+  masonry
+end
+
 get '/blog/:year' do
   blog(
     :year => params[:year]

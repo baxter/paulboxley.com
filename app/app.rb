@@ -57,3 +57,8 @@ def blog ( options={} )
   end
   haml :blog
 end
+
+def masonry ( options={} )
+  @posts = Post.list(options).sort { |a,b| b <=> a }
+  haml :masonry_layout, :layout => false
+end
