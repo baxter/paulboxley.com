@@ -31,5 +31,12 @@
       -@posts.each do |post|
         %article{ :class => post.external? ? 'external' : 'internal' }
           %h2
-            = post.title
-          ~ post.html
+            - if post.external?           
+              %a{ :href => post.url }
+                = post.title
+            - else
+              = post.title
+          ~ post.html          
+          %span.permalink
+            %a{ :href => post.permalink, :title => "Permanent link to '#{post.title}'" }
+              Permalink
