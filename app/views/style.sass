@@ -1,117 +1,86 @@
 @import helpers.sass
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, cite, code, del, em, img,
-ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
-  background: transparent
-  border: 0
-  font:
-    size: 100%
-    weight: 200
-  margin: 0
-  outline: 0
-  padding: 0
-  vertical-align: baseline
+!single_col_size  = 300px
+!margin_size      = 15px
+!padding_size     = 15px
+!border_size      = 0
+
+!single_col_width = (!single_col_size)     - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
+!double_col_width = (!single_col_size * 2) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
+!triple_col_width = (!single_col_size * 3) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
 
 body
-  background = !background_color
-  font:
-    family: Gesta, "gesta-1", "gesta-2", sans-serif
-    size: 14pt
+  background: #888 url(http://static.paulboxley.com/background.png)
+  font-family: 'Proxima Nova','proxima-nova-1','proxima-nova-2',sans-serif
+  font-size: 10pt
   text-rendering: optimizeLegibility
 
+h1, h2
+  border-bottom: 1px solid #222
+  font-weight: normal
+  padding-bottom: 0.5em
+
+h2  
+  margin: 0 0 .5em 0
+
 pre
-  border: 1px dotted #dde
-  padding: 1em
+  margin: 0 0.5em 0 1em
+  padding: 0 0 0 1em
 
-pre, code
-  color:  #333
-  font:
-    family: Inconsolata, "inconsolata-1", "inconsolata-2", monospace
-    size: 0.9em
+blockquote
+  margin: 0 0.5em 0 1em
+  padding: 0 0 0 1em
+  border-left: 4px solid #dcc
 
-header, article, footer, nav
-  display: block
+article, header
+  background: #ebe4e0 url(http://static.paulboxley.com/paper.png)
+  border: !border_size solid #777
+  line-height: 1.5em
+  margin: !margin_size
+  padding: !padding_size
+  +border_radius(20px)
+  +drop_shadow(0,0,10px,#222)
 
-h1
-  font-size: 2em
-
-h2
-  font-size: 1.5em
-
-.external h2
-  font-size: 1em
-
-a
-  color = !link_color
-  padding: 2px 3px 1px
-  border: 1px dotted
-  
-  &:hover, &:active, &:focus
-    color: white
-    
-  &:hover
-    background = !link_color
-    
-  &:active, &:focus
-    background = !active_color
-
-#wrapper
-  margin: auto
-  padding: 10px
-  width: 760px
-
-h1
-  margin: 10px 0
-
-h2, article, article p, article > *, footer > *
-  margin: 1em 0 0.5em
-
-#wrapper > header
-  h1
-    border-bottom: 1px solid black
-
-  nav li
-    display: inline
+header
+  width: !double_col_width
 
 article
-  line-height: 1.3em
-  
-  .permalink
-    margin-left: -30px
-    a
-      text-decoration: none
-      background: 
-        image:    url('/link.png')
-        repeat:   no-repeat 
-        position: 0 0
-      padding: 0 7px
-      
-      &:hover, &:active
-        background: 
-          image:    url('/link.png')
-          repeat:   no-repeat 
-          position: 0 -20px
-  
-  .posted
-    font-size: 0.75em
-  
-  ul
-    margin: 1em 0
-  
-  li
-    margin: 0.3em 0
-  
-  blockquote
-    border-left: 1px dotted black
-    margin-left: 1em
-    padding: 0.5em 1em
-    
-article.external
-  .permalink
-    margin-left: -27px
-  .posted
-    display: none
+  float: left
 
-article + article
-  border-top: 1px dotted black
+article.external
+  width: !single_col_width
+  img, object
+    max-width: !single_col_width
+  h2
+    font-size: 1.1em
+
+article.internal
+  width: !double_col_width
+  img, object
+    max-width: !double_col_width
+  h2
+    font-size: 1.6em
+
+article.cols_1
+  width: !single_col_width
+  img, object
+    max-width: !single_col_width
+
+article.cols_2
+  width: !double_col_width
+  img, object
+    max-width: !double_col_width
+    
+.permalink
+  display: block
+  font-size: 0.8em
+  line-height: 0
+  margin: 0
+  text-align: right
+
+article
+  .permalink
+    visibility: hidden
+  &:hover
+    .permalink
+      visibility: visible
