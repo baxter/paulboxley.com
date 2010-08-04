@@ -1,13 +1,13 @@
 @import helpers.sass
 
-!single_col_size  = 300px
-!margin_size      = 15px
-!padding_size     = 20px
-!border_size      = 0
+$single_col_size: 300px
+$margin_size: 15px
+$padding_size: 20px
+$border_size: 0
 
-!single_col_width = (!single_col_size)     - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
-!double_col_width = (!single_col_size * 2) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
-!triple_col_width = (!single_col_size * 3) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
+$single_col_width: $single_col_size - $margin_size * 2 - $padding_size * 2 - $border_size * 2
+$double_col_width: $single_col_size * 2 - $margin_size * 2 - $padding_size * 2 - $border_size * 2
+$triple_col_width: $single_col_size * 3 - $margin_size * 2 - $padding_size * 2 - $border_size * 2
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, cite, code, del, em, img,
@@ -26,14 +26,14 @@ header, article, footer, nav
   display: block
 
 body
-  background: #888 url(http://static.paulboxley.com/background.png)
-  font-family: 'Proxima Nova','proxima-nova-1','proxima-nova-2',sans-serif
+  background: #888888 url(http://static.paulboxley.com/background.png)
+  font-family: "Proxima Nova", "proxima-nova-1", "proxima-nova-2", sans-serif
   font-size: 10pt
   padding: 1em
   text-rendering: optimizeLegibility
 
 h1, h2
-  border-bottom: 1px solid #222
+  border-bottom: 1px solid #222222
   font-weight: normal
   padding-bottom: 0.5em
 
@@ -41,8 +41,8 @@ h1
   font-size: 2em
   margin: 0 0 0.5em
 
-h2  
-  margin: 0 0 .5em 0
+h2
+  margin: 0 0 0.5em 0
 
 p
   margin: 1.25em 0
@@ -52,50 +52,50 @@ pre, blockquote
   padding: 0 0 0 1em
 
 blockquote
-  border-left: 4px solid #dcc
+  border-left: 4px solid #ddcccc
 
 ul
   margin-left: 1.5em
 
 article, header
   background: #ebe4e0 url(http://static.paulboxley.com/paper.png)
-  border: !border_size solid #777
+  border: $border_size solid #777777
   line-height: 1.5em
-  margin: !margin_size
-  padding: !padding_size
+  margin: $margin_size
+  padding: $padding_size
   +border_radius(20px)
-  +drop_shadow(0,0,10px,#222)
+  +drop_shadow(0, 0, 10px, #222222)
 
 header
-  width: !double_col_width
+  width: $double_col_width
 
 article
   float: left
 
 article.external
-  width: !single_col_width
+  width: $single_col_width
   img, object, embed
-    max-width: !single_col_width
+    max-width: $single_col_width
   h2
     font-size: 1.1em
 
 article.internal
-  width: !double_col_width
+  width: $double_col_width
   img, object, embed
-    max-width: !double_col_width
+    max-width: $double_col_width
   h2
     font-size: 1.6em
 
 article.cols_1
-  width: !single_col_width
+  width: $single_col_width
   img, object, embed
-    max-width: !single_col_width
+    max-width: $single_col_width
 
 article.cols_2
-  width: !double_col_width
+  width: $double_col_width
   img, object, embed
-    max-width: !double_col_width
-    
+    max-width: $double_col_width
+
 .permalink
   display: block
   font-size: 0.8em
