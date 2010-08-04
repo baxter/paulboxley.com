@@ -15,16 +15,8 @@ get '/:style.css' do
   sass params[:style].to_sym
 end
 
-# Allow FeedBurner access to the real feed
-
 get '/blog/feed.atom' do
   feed :atom
-end
-
-# Redirect everyone else to FeedBurner
-
-get '/blog/feed.atom' do
-  redirect 'http://feeds.feedburner.com/PaulBoxley', 303
 end
 
 get '/blog' do
