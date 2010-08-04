@@ -2,7 +2,7 @@ source :gemcutter
 
 gem "tilt"
 gem "sinatra"
-gem "haml"
+gem "haml", "3.0.15"
 gem "builder"
 gem "bluecloth"
 
