@@ -2,17 +2,34 @@
 
 !single_col_size  = 300px
 !margin_size      = 15px
-!padding_size     = 15px
+!padding_size     = 20px
 !border_size      = 0
 
 !single_col_width = (!single_col_size)     - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
 !double_col_width = (!single_col_size * 2) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
 !triple_col_width = (!single_col_size * 3) - (!margin_size * 2) - (!padding_size * 2) - (!border_size * 2)
 
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, cite, code, del, em, img,
+ins, dl, dt, dd, ol, ul, li, header, article, footer, nav
+  background: transparent
+  border: 0
+  font:
+    size: 100%
+    weight: 200
+  margin: 0
+  outline: 0
+  padding: 0
+  vertical-align: baseline
+
+header, article, footer, nav
+  display: block
+
 body
   background: #888 url(http://static.paulboxley.com/background.png)
   font-family: 'Proxima Nova','proxima-nova-1','proxima-nova-2',sans-serif
   font-size: 10pt
+  padding: 1em
   text-rendering: optimizeLegibility
 
 h1, h2
@@ -20,17 +37,25 @@ h1, h2
   font-weight: normal
   padding-bottom: 0.5em
 
+h1
+  font-size: 2em
+  margin: 0 0 0.5em
+
 h2  
   margin: 0 0 .5em 0
 
-pre
-  margin: 0 0.5em 0 1em
+p
+  margin: 1.25em 0
+
+pre, blockquote
+  margin: 1em 0
   padding: 0 0 0 1em
 
 blockquote
-  margin: 0 0.5em 0 1em
-  padding: 0 0 0 1em
   border-left: 4px solid #dcc
+
+ul
+  margin-left: 1.5em
 
 article, header
   background: #ebe4e0 url(http://static.paulboxley.com/paper.png)
@@ -49,26 +74,26 @@ article
 
 article.external
   width: !single_col_width
-  img, object
+  img, object, embed
     max-width: !single_col_width
   h2
     font-size: 1.1em
 
 article.internal
   width: !double_col_width
-  img, object
+  img, object, embed
     max-width: !double_col_width
   h2
     font-size: 1.6em
 
 article.cols_1
   width: !single_col_width
-  img, object
+  img, object, embed
     max-width: !single_col_width
 
 article.cols_2
   width: !double_col_width
-  img, object
+  img, object, embed
     max-width: !double_col_width
     
 .permalink
