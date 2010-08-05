@@ -15,7 +15,7 @@ set :public, Proc.new { File.join("content", "static") }
 configure do
   if ENV['RACK_ENV'] == 'development' then
     Site = {
-      :title => 'Paul Boxley – DEVELOPMENT',
+      :title => 'Paul Boxley – DEV',
       :base_url => 'http://localhost:9393/',
     }
   else
