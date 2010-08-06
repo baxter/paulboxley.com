@@ -21,7 +21,7 @@ configure do
   else
     Site = {
       :title => 'Paul Boxley',
-      :base_url => 'http://paulboxley.com',
+      :base_url => 'http://paulboxley.com/',
     }
   end
 end
