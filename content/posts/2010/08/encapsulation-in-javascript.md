@@ -12,4 +12,4 @@ On the subject of JavaScript, I've become very fond of the following technique f
           val = newVal;
         }
       };
-    };
+    }("My initial value.");
