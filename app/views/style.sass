@@ -47,12 +47,25 @@ h2
 p
   margin: 1.25em 0
 
+pre
+  padding: 1em
+  +border_radius(15px)
+
+pre, code
+  border-top: 1px solid #cbc4c0
+  border-left: 1px solid #cbc4c0
+  border-right: 1px solid #fbf4f0
+  border-bottom: 1px solid #fbf4f0
+
+pre code
+  border: none
+
 pre, blockquote
   margin: 1em 0
-  padding: 0 0 0 1em
 
 blockquote
   border-left: 4px solid #ddcccc
+  padding: 0 0 0 1em
 
 ul, ol
   margin-left: 1.5em
@@ -64,7 +77,7 @@ article, header
   margin: $margin_size
   padding: $padding_size
   +border_radius(20px)
-  +drop_shadow(0, 0, 10px, #222222)
+  +drop_shadow(1px, 1px, 10px, #222222)
 
 header
   width: $single_col_width
