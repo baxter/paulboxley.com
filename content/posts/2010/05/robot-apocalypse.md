@@ -1,6 +1,7 @@
 Title: For those who doubt that the robot apocalypse is inevitable
 Posted: 2010-05-28 07:50Z
 URL: http://www.youtube.com/watch?v=nUQsRPJ1dYw
+Cols: 2
 
 The latest version of the LittleDog robot:
 

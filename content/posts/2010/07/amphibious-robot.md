@@ -1,6 +1,7 @@
 Title:  Amphibious robot
 Posted: 2010-07-10 16:25Z
 URL:    http://www.youtube.com/watch?v=jFaMVBMfmNs
+Cols:   2
 
 Part of the [AQUA Robot project](http://www.aquarobot.net:8080/AQUA).
 
