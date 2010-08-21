@@ -1,5 +1,11 @@
 @import helpers.sass
 
+$background_color: #888888
+$article_color: #ebe4e0
+$article_highlight: #fffaf8
+$text_color: black
+$title_color: #7d5855
+
 $single_col_size: 300px
 $margin_size: 15px
 $padding_size: 20px
@@ -26,7 +32,7 @@ header, article, footer, nav
   display: block
 
 body
-  background: #888888 url(http://static.paulboxley.com/background.png)
+  background: $background_color url(http://static.paulboxley.com/background.png)
   font-family: "Proxima Nova", "proxima-nova-1", "proxima-nova-2", sans-serif
   font-size: 10pt
   padding: 1em
@@ -34,12 +40,14 @@ body
 
 h1, h2
   border-bottom: 1px solid #222222
+  color: $title_color
   font-weight: normal
   padding-bottom: 0.5em
 
 h1
   font-size: 2em
   margin: 0 0 0.5em
+  text-shadow: $article_highlight 0 2px 1px
 
 h2
   margin: 0 0 0.5em 0
@@ -79,7 +87,7 @@ ul, ol
   margin-left: 1.5em
 
 article, header
-  background: #ebe4e0 url(http://static.paulboxley.com/paper.png)
+  background: $article_color url(http://static.paulboxley.com/paper.png)
   border: $border_size solid #777777
   line-height: 1.5em
   margin: $margin_size
@@ -99,6 +107,7 @@ article.external
     max-width: $single_col_width
   h2
     font-size: 1.1em
+    text-shadow: $article_highlight 0 1px 1px
 
 article.internal
   width: $double_col_width
@@ -106,6 +115,7 @@ article.internal
     max-width: $double_col_width
   h2
     font-size: 1.6em
+    text-shadow: $article_highlight 0 2px 1px
 
 article.cols_1
   width: $single_col_width
