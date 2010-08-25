@@ -19,29 +19,14 @@ get '/blog/feed.atom' do
   feed :atom
 end
 
-get '/blog' do
-  blog
-end
-
-get '/blog/:year' do
-  blog(
-    :year => params[:year]
-  )
-end
-
-get '/blog/:year/:month' do
-  blog(
-    :year => params[:year],
-    :month => params[:month]
-  )
-end
-
-get '/blog/:year/:month/:name' do
-  blog(
-    :year => params[:year],
-    :month => params[:month],
-    :name => params[:name]
-  )
+get %r{/blog(/[0-9]{4})?(/[0-9]{2})?(/[a-z0-9\-]+)?} do
+  posts = {}
+  params[:captures] ||= []
+  params[:captures].each { |x| x.gsub('/','') unless x.nil? } # Remove leading slashes
+  posts[:year]  = params[:captures][0]
+  posts[:month] = params[:captures][1]
+  posts[:name]  = params[:captures][2]
+  blog(posts)
 end
 
 get '/:page' do
