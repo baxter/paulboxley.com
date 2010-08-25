@@ -55,5 +55,8 @@ def blog ( options={} )
   if @posts.size == 1 then
     @title = @posts[0].title
   end
+  if @posts.size == 0 then
+    not_found
+  end
   haml :blog
 end
