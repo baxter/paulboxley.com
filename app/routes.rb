@@ -22,7 +22,7 @@ end
 get %r{/blog(/[0-9]{4})?(/[0-9]{2})?(/[a-z0-9\-]+)?} do
   posts = {}
   params[:captures] ||= []
-  params[:captures].each { |x| x.gsub('/','') unless x.nil? } # Remove leading slashes
+  params[:captures].each { |x| x.gsub!('/','') unless x.nil? } # Remove leading slashes
   posts[:year]  = params[:captures][0]
   posts[:month] = params[:captures][1]
   posts[:name]  = params[:captures][2]
