@@ -64,8 +64,9 @@ class Post < FileModel
   
   def tweet
     params = {
-      'url'   => permalink,
-      'title' => title,
+      'url'     => permalink,
+      'text'    => title,
+      'related' => 'baxt3r'
     }.collect { 
       |k,v| CGI.escape(k) + '=' + CGI.escape(v)
     }.join '&'
