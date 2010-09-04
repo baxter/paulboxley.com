@@ -9,5 +9,9 @@
     ~ post.html          
     %span.permalink
       [
+      %a{ :href => post.tweet,     :title => "Tweet '#{post.title}'" } Tweet
+      ]
+      &nbsp;
+      [
       %a{ :href => post.permalink, :title => "Permanent link to '#{post.title}'" } Permalink
       ]
