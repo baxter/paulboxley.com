@@ -1,4 +1,5 @@
 require 'app/models/file_model'
+require 'cgi'
 
 class Post < FileModel
   
@@ -59,6 +60,16 @@ class Post < FileModel
   
   def permalink
     Site[:base_url].gsub(/\/$/,'') + "/blog/#{self.year}/#{self.month}/#{self.name}"
+  end
+  
+  def tweet
+    params = {
+      'url'   => permalink,
+      'title' => title,
+    }.collect { 
+      |k,v| CGI.escape(k) + '=' + CGI.escape(v)
+    }.join '&'
+    'http://twitter.com/share?' + params
   end
   
   def posted
