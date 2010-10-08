@@ -1,7 +1,7 @@
 Title: 1,024 Tweets
 Posted: 2010-10-08 06:49Z
 
-Today marks my 1,024th tweet! That's 2<sup>10</sup> tweets for people that aren't constantly thinking in 2<sup>n</sup>.
+Today marks [my 1,024th tweet][1024]! That's 2<sup>10</sup> tweets for people that aren't constantly thinking in 2<sup>n</sup>.
 
 A bit of analysis. My [first tweet][1] was on the 18th of March 2007:
 
@@ -13,7 +13,7 @@ I've done some basic analysis of the language I've used.
 
 It turns out I've used the word 'I' about 364 times and the word 'you' only about 167 times. I've said 'thanks' 42 times.
 
-I use emoticons a lot. I've used ':)' 139 times, ':D' 93 times, ';)' 51 times, ':P' 40 times and, unfortunately, ':(' 25 times.
+I use emoticons a lot. I've used ':)' 139 times, ':D' 94 times, ';)' 51 times, ':P' 40 times and, unfortunately, ':(' 25 times.
 
 The proper noun that I have used the most is the word 'work' 41 times, followed by 'today', 'awesome', 'twitter' and 'nice'.
 
@@ -52,6 +52,7 @@ On version control:
 
 To those of you on my timeline, thanks for making Twitter a more interesting place. See you again after 2,048 tweets! :)
 
+  [1024]: http://twitter.com/baxt3r/statuses/26730401535
   [1]: http://twitter.com/baxt3r/statuses/9251621
   [@bexor]:         http://twitter.com/bexor
   [@stylva]:        http://twitter.com/stylva
