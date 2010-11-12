@@ -2,3 +2,4 @@
 .bundle
 .sass-cache
 start.sh
+Gemfile.lock
