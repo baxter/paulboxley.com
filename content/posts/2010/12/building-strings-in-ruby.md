@@ -1,7 +1,7 @@
 Title: Building strings in Ruby
 Posted: 2010-12-05 17:04Z
 
-The standard way of building strings in Ruby is to use the spade operator (`<<`) to modify an existing string by appending other strings to the end of it.
+The standard way of building strings in Ruby is to use the spade operator (`<<`) to modify an existing string by appending other strings to the end of it. The spade operator is used over `+=` since the latter will create a new object every time it's called.
 
 In some situations, though, I prefer a different method of building strings.
 
