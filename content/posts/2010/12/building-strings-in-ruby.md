@@ -22,7 +22,7 @@ How do we go about building the query string itself?
 
 One way would be to iterate through each of the elements in our `parameters` hash and append each one to a string, separating the key and the value with an '`=`' character and separating each pair with an ampersand.
 
-Let's write a `querystring` method to do that:
+Let's write a querystring method to do that:
 
     def querystring(p)
       query_string = ""
@@ -45,9 +45,7 @@ There are a few problems with this code though.
 * We have to mention the string at the end of the method, since without it `params` would be returned.
 * We get a trailing ampersand in our query string.
 
-We could work around that last problem, but that would make this method more complex. Let's think of a more elegant way of building the string.
-
-### Thinking functionally
+We could work around that last problem, but that would make this method more complex. If you're familiar with functional programming, or even the functional elements of Ruby, then a cleaner solution will probably seem obvious.
 
 Enumerable's [collect][collect] method accepts a block as a parameter and then goes through every element, running that block against each element, then returning a new Array. We can make use of collect to turn our params Hash into an Array where each element looks like `"key=value"`.
 
