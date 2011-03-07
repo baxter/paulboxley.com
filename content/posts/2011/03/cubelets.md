@@ -1,5 +1,5 @@
 Title: Cubelets – modular robots
-Posted: 2011-03-05 07:00Z
+Posted: 2011-03-04 07:00Z
 URL: http://www.modrobotics.com/cubelets
 Cols: 2
 

@@ -1,5 +1,5 @@
 Title: Vintage Future – a tumblr of retro visions of the future
-Posted: 2011-03-06 07:00Z
+Posted: 2011-03-04 15:00Z
 URL: http://vintagefuture.tumblr.com/
 
 ![Some sort of subterranean moon dwelling](http://static.paulboxley.com/vintage-future.jpg)
