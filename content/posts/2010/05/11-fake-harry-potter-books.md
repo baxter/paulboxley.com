@@ -2,7 +2,7 @@ Title: 11 fake Harry Potter books
 Posted: 2010-05-05 17:49Z  
 URL: http://www.11points.com/Books/11_Amazing_Fake_%27Harry_Potter%27_Books_Written_In_China  
 
-China is famous for many things – the Great Wall, ancient 
+China is famous for many things &mdash; the Great Wall, ancient 
 dynasties, a communist doctrine that combines 
 elements of marxism and free market economics and, of 
 course, fake Harry Potter books. 

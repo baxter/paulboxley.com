@@ -1,4 +1,4 @@
-Title: Sevilla 111 – A 111 Gigapixel image
+Title: Sevilla 111 &mdash; A 111 Gigapixel image
 Posted: 2010-12-16 12:09Z
 URL: http://www.sevilla111.com/
 

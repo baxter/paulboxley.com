@@ -1,4 +1,4 @@
-Title: Cadence & Slang – a book about interaction design
+Title: Cadence & Slang &mdash; a book about interaction design
 Posted: 2010-12-05 11:04Z
 URL: http://cadence.cc/
 

@@ -1,4 +1,4 @@
-Title: "Not Pro-Gay Marriage, I’m Pro-Equality" – Derek Powazek
+Title: "Not Pro-Gay Marriage, I’m Pro-Equality" &mdash; Derek Powazek
 Posted: 2010-08-07 00:00Z
 URL: http://powazek.com/posts/2599
 

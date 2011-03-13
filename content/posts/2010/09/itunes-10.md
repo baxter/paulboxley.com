@@ -9,7 +9,7 @@ The Mail icon is a stamp. Safari is a compass. iCal is a desk calendar. Automato
 
 I understand that a CD probably isn't a valid metaphor for iTunes any more, but by not representing a real object it stands out as unusual amongst Apple's other icons.
 
-On top of that the new icon doesn't have a very good silhouette. Maybe that's not an issue – the new icon is definitely iconic. But most of Apple's icons, and most third-party icons that I like, have a distinctive outline.
+On top of that the new icon doesn't have a very good silhouette. Maybe that's not an issue &mdash; the new icon is definitely iconic. But most of Apple's icons, and most third-party icons that I like, have a distinctive outline.
 
 ![Various icons in silhouette form](http://static.paulboxley.com/itunes_10_silhouettes.png)
 

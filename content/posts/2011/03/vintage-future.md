@@ -1,4 +1,4 @@
-Title: Vintage Future – a tumblr of retro visions of the future
+Title: Vintage Future &mdash; a tumblr of retro visions of the future
 Posted: 2011-03-04 15:00Z
 URL: http://vintagefuture.tumblr.com/
 
