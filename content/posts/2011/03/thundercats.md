@@ -1,4 +1,4 @@
-Title: Thundercats – New trailer from Cartoon Network
+Title: Thundercats &mdash; New trailer from Cartoon Network
 Posted: 2011-03-03 23:03Z
 URL: http://www.youtube.com/watch?v=GrBmWKAyPk8
 Cols: 2

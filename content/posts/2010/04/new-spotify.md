@@ -4,7 +4,7 @@ URL:    http://blog.hunch.se/2010/04/spotify-next-generation
 
 I love using Spotify but, understandably, not all of the 
 music I like is available online, which means switching to 
-iTunes for certain songs – so this will save me some 
+iTunes for certain songs &mdash; so this will save me some 
 valuable keystrokes!
 
 Seems like there is a staggered rollout, so I'm still 

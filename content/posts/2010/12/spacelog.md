@@ -1,4 +1,4 @@
-Title: Spacelog – stories from the transcripts of early space exploration
+Title: Spacelog &mdash; stories from the transcripts of early space exploration
 Posted: 2010-12-04 23:36Z
 URL: http://spacelog.org/
 

@@ -1,4 +1,4 @@
-Title: Mozilla Seabird phone – amazing but only a concept
+Title: Mozilla Seabird phone &mdash; amazing but only a concept
 Posted: 2010-09-25 22:25Z
 
 I just watched the video for the [Mozilla Seabird phone][1], and it left me both impressed and frustrated.

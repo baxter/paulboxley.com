@@ -1,4 +1,4 @@
-Title: Google launch a TV service – Google TV
+Title: Google launch a TV service &mdash; Google TV
 Posted: 2010-05-20 20:03Z
 URL: http://www.google.com/tv/
 Cols: 2

@@ -1,4 +1,4 @@
-Title: Alfred – An app launcher
+Title: Alfred &mdash; An app launcher
 Posted: 2010-06-01 21:49Z
 URL: http://www.alfredapp.com/
 
