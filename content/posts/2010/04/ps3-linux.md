@@ -3,7 +3,7 @@ Posted: 2010-04-09 20:53Z
 
 Sony [announced last month][sony] that the original PlayStation 3 will no longer support the installation of an alternate operating system. As of Firmware v3.21 the option to "Install Other OS" will be disabled.
 
-Now [geek.com is reporting][geek] that a member of NeoGAF has written to Amazon claiming that his PlayStation 3 does not fit the original description of the product, and under European law have refunded him *£84*.
+Now [geek.com is reporting][geek] that a member of NeoGAF has written to Amazon claiming that his PlayStation 3 does not fit the original description of the product, and under European law have refunded him *GBP 84*.
 
 I wonder if this will inspire more PS3 users to contact their retailers for a refund, although I don't expect the proportion of PS3 Linux users is high enough for Sony to reverse their decision.
 
