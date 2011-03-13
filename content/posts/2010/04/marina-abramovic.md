@@ -1,10 +1,10 @@
-Title: Marina Abramović
+Title: Marina Abramovi&#x107;
 Posted: 2010-04-27 17:54Z
-Web: Unfortunately the custom font that I use doesn't properly style 'ć'. My apologies.
+Web: Unfortunately the custom font that I use doesn't properly style '&#x107;'. My apologies.
 
-I discovered Marina Abramović [via 
+I discovered Marina Abramovi&#x107; [via 
 Kottke][kottke-abramovic], who linked to the tumblr blog 
-[Marina Abramović Made Me Cry][abramovic-cry].
+[Marina Abramovi&#x107; Made Me Cry][abramovic-cry].
 
 > Abramovic sits at a table in silence, and museum guests 
 > can sit across from her and stare.
@@ -14,7 +14,7 @@ Kottke][kottke-abramovic], who linked to the tumblr blog
 The full set of photos can be found on [MoMA's flickr 
 account][moma-flickr].
 
-I spent a little time reading about Marina Abramović and she 
+I spent a little time reading about Marina Abramovi&#x107; and she 
 is absolutely fascinating. She started performance art in 
 the 70s and in one exhibit, titled *Rhythm 0*, she placed 72 
 objects on a desk, including a gun and a bullet, and allowed 
@@ -33,7 +33,7 @@ chose. She said about the performance:
 > up and started walking toward the public. Everyone ran 
 > away, escaping an actual confrontation.
 
-*From [A Daneri, et al., (eds.), Marina Abramović, (Charta, 
+*From [A Daneri, et al., (eds.), Marina Abramovi&#x107;, (Charta, 
 2002) via Wikipedia][wikipedia]*
 
 ### Epilogue
@@ -62,7 +62,7 @@ various guises:
   [kottke-abramovic]: http://kottke.org/10/04/marina-abramovic-made-me-cry
   [abramovic-cry]: http://marinaabramovicmademecry.tumblr.com/
   [moma-flickr]: http://www.flickr.com/photos/themuseumofmodernart/sets/72157623741486824/
-  [wikipedia]: http://en.wikipedia.org/w/index.php?title=Marina_Abramović&oldid=357491619#Rhythm_0.2C_1974
+  [wikipedia]: http://en.wikipedia.org/w/index.php?title=Marina_Abramovi&#x107;&oldid=357491619#Rhythm_0.2C_1974
   [comment]: http://www.flickr.com/photos/themuseumofmodernart/4545937591/#comment72157623794710583
   
   [link-36-9]: http://www.flickr.com/photos/themuseumofmodernart/4545937591/in/set-72157623741486824/

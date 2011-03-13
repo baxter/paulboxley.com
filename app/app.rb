@@ -3,9 +3,9 @@ require 'haml'
 require 'sass'
 require 'builder'
 require 'bluecloth'
-require 'app/models/page'
-require 'app/models/post'
-require 'app/routes'
+require File.dirname(__FILE__) + '/models/page'
+require File.dirname(__FILE__) + '/models/post'
+require File.dirname(__FILE__) + '/routes'
 
 set :haml, { :format => :html5 }
 set :sass, { :style  => :expanded }
@@ -15,7 +15,7 @@ set :public, Proc.new { File.join("content", "static") }
 configure do
   if ENV['RACK_ENV'] == 'development' then
     Site = {
-      :title => 'Paul Boxley – DEV',
+      :title => 'Paul Boxley - DEV',
       :base_url => 'http://localhost:9393/',
     }
   else
