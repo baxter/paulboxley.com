@@ -18,7 +18,7 @@ class FileModel
     if matches.empty?
       raise Sinatra::NotFound
     end
-    f = File.open(matches.first)
+    f = File.open(matches.first, "r:UTF-8")
     
     metadata_string, @content = f.read.split(/\r?\n\r?\n/, 2)
     
