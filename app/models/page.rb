@@ -1,4 +1,4 @@
-require 'app/models/file_model'
+require File.dirname(__FILE__) + '/file_model'
 
 class Page < FileModel
   class << self  
