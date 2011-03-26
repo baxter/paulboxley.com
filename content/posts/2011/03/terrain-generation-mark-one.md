@@ -5,7 +5,7 @@ Lately I've been playing with the [diamond square algorithm][diamond-square], a 
 
 I started in Ruby initially but, inspired by [Jamis Buck's excellent maze algorithm visualisations][mazes], I decided to rewrite my work in CoffeeScript. It's still a work in progress but I figured I'd show what I had so far.
 
-The diamond square algorithm works on a 2D array that's n<sup>2</sup>+1 square, and needs the four corner points of the array to have a value set before it starts. All the other points in the grid have no value, but in the visualisation below I've displayed the points as though they were set to zero.
+The diamond square algorithm works on a 2D array that's 2<sup>n</sup>+1 square, and needs the four corner points of the array to have a value set before it starts. All the other points in the grid have no value, but in the visualisation below I've displayed the points as though they were set to zero.
 
 I've also drawn polygons between the points to make the visualisation look a bit clearer.
 
@@ -18,9 +18,9 @@ I've also drawn polygons between the points to make the visualisation look a bit
 
 <p style="text-align: center; font-size: 1.25em;">
   <canvas id="terrain" width="530" height="430"></canvas>
-  <a href="javascript:draw_step();">Step</a> &mdash;
-  <a href="javascript:draw_run();">Run</a> &mdash;
-  <a href="javascript:draw_reset();">Reset</a>
+  <a href="#" onclick="draw_step(); return false;">Step</a> &mdash;
+  <a href="#" onclick="draw_run(); return false;">Run</a> &mdash;
+  <a href="#" onclick="draw_reset(); return false;">Reset</a>
 </p>
 
 The first thing that the algorithm does is set the centre point by averaging the four corner values and adding or subtracting a random amount of noise. This is the 'diamond' step.
