@@ -5,7 +5,7 @@ Lately I've been playing with the [diamond square algorithm][diamond-square], a 
 
 I started in Ruby initially but, inspired by [Jamis Buck's excellent maze algorithm visualisations][mazes], I decided to rewrite my work in CoffeeScript. It's still a work in progress but I figured I'd show what I had so far.
 
-The diamond square algorithm works on a 2D array that's n<sup>2</sup>+1 square, and needs the four corner points of the array to have a value set before it starts. All the other points in the grid have no value, but in the visualisation below I've displayed the points as though they were set to zero.
+The diamond square algorithm works on a 2D array that's 2<sup>n</sup>+1 square, and needs the four corner points of the array to have a value set before it starts. All the other points in the grid have no value, but in the visualisation below I've displayed the points as though they were set to zero.
 
 I've also drawn polygons between the points to make the visualisation look a bit clearer.
 
