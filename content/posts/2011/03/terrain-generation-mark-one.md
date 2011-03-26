@@ -18,9 +18,9 @@ I've also drawn polygons between the points to make the visualisation look a bit
 
 <p style="text-align: center; font-size: 1.25em;">
   <canvas id="terrain" width="530" height="430"></canvas>
-  <a href="javascript:draw_step();">Step</a> &mdash;
-  <a href="javascript:draw_run();">Run</a> &mdash;
-  <a href="javascript:draw_reset();">Reset</a>
+  <a href="#" onclick="draw_step(); return false;">Step</a> &mdash;
+  <a href="#" onclick="draw_run(); return false;">Run</a> &mdash;
+  <a href="#" onclick="draw_reset(); return false;">Reset</a>
 </p>
 
 The first thing that the algorithm does is set the centre point by averaging the four corner values and adding or subtracting a random amount of noise. This is the 'diamond' step.
