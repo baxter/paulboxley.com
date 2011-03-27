@@ -37,6 +37,9 @@ The whole process runs extremely quickly, even in the browser, so I've added a d
 
 As I said before, it's a work in progress, so if you encounter any bugs or think I should try something different then send me an email at paul [at] paulboxley.com or send a tweet to [@baxt3r][].
 
+***Update: See [my next post][next] for links to the source code.***
+
   [diamond-square]: http://en.wikipedia.org/wiki/Diamond-square_algorithm
   [mazes]: http://www.jamisbuck.org/mazes/
   [@baxt3r]: https://twitter.com/baxt3r
+  [next]: /blog/2011/03/terrain-generation-source
