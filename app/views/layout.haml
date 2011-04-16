@@ -12,9 +12,27 @@
     %script{ :src => "http://static.paulboxley.com/jquery.masonry.js", :type => "text/javascript" }
     /[if lte IE 8]
       %script{ :src => "http://static.paulboxley.com/html5.js", :type => "text/javascript" }
-    %script{ :src => "http://use.typekit.com/wri1cev.js", :type => "text/javascript" }
+    /
+      MyFonts Webfont Build ID 787053, 2011-04-16T08:04:14-0400
+      
+      The fonts listed in this notice are subject to the End User License
+      Agreement(s) entered into by the website owner. All other parties are 
+      explicitly restricted from using the Licensed Webfonts(s).
+      
+      You may obtain a valid license at the URLs below.
+      
+      Webfont: Proxima Nova Regular
+      URL: http://new.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+      Foundry: Mark Simonson
+      Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+      License: http://www.myfonts.com/viewlicense?1056
+      Licensed pageviews: 20,000/month
+      CSS font-family: ProximaNova-Regular
+      CSS font-weight: normal
+      
+      (c) 2011 Bitstream, Inc
+      
     :javascript
-      try{Typekit.load();}catch(e){};
       $(window).load(function(){
         $('#wrapper').masonry({
           columnWidth: 300,
@@ -22,6 +40,10 @@
           animate: true
         });
       });
+      var myfont_webfont_test = false;
+      var woffEnabled = true;
+      var customPath = "http://static.paulboxley.com/fonts";
+    %script{ :src => "http://static.paulboxley.com/fonts/proxima_nova.js", :type => "text/javascript" }
   %body
     %header
       %h1
