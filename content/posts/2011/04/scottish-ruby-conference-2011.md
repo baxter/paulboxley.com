@@ -23,7 +23,7 @@ This point, along with everything else, has really made me think about what I'm 
 
 All in all, I'm still finding it difficult to succinctly express how much I enjoyed the conference. It was fantastic and I met so many wonderful people.
 
-So, thanks very much [Paul][paulanthonywils], [Alan][alancfrancis] and [Graeme][mathie] for organising it, it was great.
+So, thanks very much [Paul][paulanthonywils], [Alan][alancfrancis] and [Graeme][mathie] for organising it, it was great and I can't wait for the next one!
 
   [tshirt-pic]: http://farm6.static.flickr.com/5266/5604281252_9520c22b32_z.jpg
   [tshirt-page]: http://www.flickr.com/photos/urgetopunt/5604281252/in/pool-scotruby2011
