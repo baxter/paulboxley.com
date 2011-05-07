@@ -3,9 +3,9 @@ require 'haml'
 require 'sass'
 require 'builder'
 require 'bluecloth'
-require File.dirname(__FILE__) + '/models/page'
-require File.dirname(__FILE__) + '/models/post'
-require File.dirname(__FILE__) + '/routes'
+require_relative 'models/page'
+require_relative 'models/post'
+require_relative 'routes'
 
 set :haml, { :format => :html5 }
 set :sass, { :style  => :expanded }

@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/file_model'
+require_relative 'file_model'
 require 'cgi'
 
 class Post < FileModel
