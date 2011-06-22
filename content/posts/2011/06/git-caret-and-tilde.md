@@ -9,7 +9,7 @@ If you want a deeper explanation skip down to "The long version".
 
 `ref~` is shorthand for `ref~1` and means the commit's first parent. `ref~2` means the commit's first parent's first parent. `ref~3` means the commit's first parent's first parent's first parent. And so on.
 
-`ref^` is shorthand for `ref^1` and means the commit's first parent. But where the two differ is that `ref^2` means the commit's ***second parent***.
+`ref^` is shorthand for `ref^1` and means the commit's first parent. But where the two differ is that `ref^2` means the commit's ***second parent*** (remember, commits can have two parents when they are a merge).
 
 The ^ and ~ operators can be combined.
 
