@@ -3,13 +3,21 @@ Posted: 2011-06-20 19:42Z
 
 I spent a little bit of time playing with Git today, specifically the way that the ^ (caret) and ~ (tilde) work and thought I'd document it here in case I forget.
 
-### A diagram
+### The short version
 
-If you just want a quick reminder here's a diagram, for more information skip to the next section, "an explanation".
+If you want a deeper explanation skip down to "The long version".
+
+`ref~` is shorthand for `ref~1` and means the commit's first parent. `ref~2` means the commit's first parent's first parent. `ref~3` means the commit's first parent's first parent's first parent. And so on.
+
+`ref^` is shorthand for `ref^1` and means the commit's first parent. But where the two differ is that `ref^2` means the commit's ***second parent***.
+
+The ^ and ~ operators can be combined.
+
+Here's a diagram showing how to reference various commits using HEAD as the starting point.
 
 ![Referencing commits from HEAD using ~ and ^](http://static.paulboxley.com.s3.amazonaws.com/git-head.png)
 
-### An explanation
+### The long version
 
 I've created a dummy repository with several commits in it.
 
