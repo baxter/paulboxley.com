@@ -55,6 +55,10 @@ h2
 h3
   font-size: 1.2em
 
+a
+  margin: -0.25em
+  padding: 0.25em
+
 p
   margin: 1.25em 0
 
@@ -101,6 +105,13 @@ article, header
 
 header
   width: $single_col_width
+  ul
+    margin: 0
+  li
+    display: inline
+    margin: 0
+  li+li
+    padding-left: 1em
 
 article
   float: left
@@ -113,7 +124,7 @@ article.external
     font-size: 1.1em
     text-shadow: $article_highlight 0 -1px 1px
 
-article.internal
+article, article.internal
   width: $double_col_width
   img, object, embed
     max-width: $double_col_width

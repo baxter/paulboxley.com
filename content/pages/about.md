@@ -1,13 +1,11 @@
-//
+--
 
-### The site
+As you have no doubt already deduced from the name of this site, my name is Paul Boxley.
 
-If you're interested in the blog you can check out its source on [github][].
+I'm a software developer living and working in Edinburgh.
 
-### The person
+In my spare time I enjoy writing code – at the moment I'm quite interested in procedural generation.
 
-I'm Paul Boxley, a software developer living in Edinburgh.
+### Contact me
 
-If you'd like to contact me then send an email to paul at this domain name.
-
-  [github]:       http://github.com/baxter/paulboxley.com/
+You can email me at paul at paulboxley dot com or tweet me at [@baxt3r](http://twitter.com/baxt3r)
