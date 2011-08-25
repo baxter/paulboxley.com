@@ -52,7 +52,7 @@ class Post < FileModel
   
   def url
     if metadata('url')
-      metadata 'url'
+      metadata('url').strip
     else
       permalink
     end
