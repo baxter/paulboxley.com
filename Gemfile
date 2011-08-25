@@ -6,6 +6,7 @@ gem "sinatra"
 gem "haml", "3.0.15"
 gem "builder"
 gem "bluecloth"
+gem "sanitize"
 
 group :development do
   gem "shotgun"

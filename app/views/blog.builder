@@ -30,7 +30,7 @@ xml.feed(:xmlns => 'http://www.w3.org/2005/Atom') {
         xml.uri(Site[:base_url])
       }
       xml.content(:type => 'html', "xml:lang" => 'en', "xml:base" => Site[:base_url]) {
-        xml.cdata!(post.html)
+        xml.cdata!(post.sanitized_html)
       }
     }
   end

@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'bluecloth'
-
+require 'sanitize'
 
 class FileModel
   def initialize(options={})
@@ -54,6 +54,10 @@ class FileModel
   
   def html
     BlueCloth.new(@content).to_html
+  end
+  
+  def sanitized_html
+    Sanitize.clean(html, Sanitize::Config::RELAXED)
   end
 
   # The location of this resource on the filesystem.
