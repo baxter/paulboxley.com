@@ -48,15 +48,29 @@ def page ( page_name )
 end
 
 def blog ( options={} )
-  options[:limit] ||= 100
+  @display_type = case
+    when options[:name]  then :single
+    when options[:month] then :month
+    when options[:year]  then :year
+    else :all
+  end
+  puts "Display type: #{@display_type}"
+  options[:page_size] ||= 10
+  options[:page_number] ||= 1
+  @current_page = options[:page_number] # The view needs this to build page nav links
+  last_post  = @current_page * options[:page_size]
+  first_post = last_post - options[:page_size]
   # Limiting posts -after- the array has been built is inefficient
   # but its impact seems to be negligible for now.
-  @posts = Post.list(options).sort { |a,b| b <=> a }[0...options[:limit]]
+  # Should be cached with varnish anyway.
+  all_posts = Post.list(options).sort { |a,b| b <=> a }
+  @posts = all_posts[first_post..last_post]
+  @total_pages = (all_posts.length.to_f / options[:page_size].to_f).ceil
+  if @posts.nil? or @posts.size == 0 then
+    not_found
+  end
   if @posts.size == 1 then
     @title = @posts[0].title
-  end
-  if @posts.size == 0 then
-    not_found
   end
   haml :blog
 end

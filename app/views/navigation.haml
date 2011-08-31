@@ -5,3 +5,11 @@
     %a{ :href => "/about" } about
   %li
     %a{ :href => "/elsewhere" } elsewhere
+- if @display_type == :all
+  #pages
+    - if @current_page > 1
+      %a{ :href => "/blog/page-#{@current_page - 1}", :class => "prev-page" } 
+        = "Page #{@current_page - 1}"
+    - if @current_page < @total_pages
+      %a{ :href => "/blog/page-#{@current_page + 1}", :class => "next-page" }
+        = "Page #{@current_page + 1}"
