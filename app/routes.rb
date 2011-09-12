@@ -20,13 +20,14 @@ get '/blog/feed.atom' do
 end
 
 get %r{/blog(/[0-9]{4})?(/[0-9]{2})?(/[a-z0-9\-]+)?} do
-  posts = {}
+  options = {}
   params[:captures] ||= []
   params[:captures].each { |x| x.gsub!('/','') unless x.nil? } # Remove leading slashes
-  posts[:year]  = params[:captures][0]
-  posts[:month] = params[:captures][1]
-  posts[:name]  = params[:captures][2]
-  blog(posts)
+  options[:year]  = params[:captures][0]
+  options[:month] = params[:captures][1]
+  options[:name]  = params[:captures][2]
+  options[:page_number] = params[:page].to_i unless params[:page].nil?
+  blog(options)
 end
 
 get '/:page' do

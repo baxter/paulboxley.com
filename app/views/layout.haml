@@ -8,8 +8,9 @@
     %link{ :type => "application/atom+xml", :rel => "alternate", :href => Site[:base_url] + "blog/feed.atom" }
     %link{ :type => "image/png", :rel => "icon", :href => "http://static.paulboxley.com/favicon.png" }
     %link{ :type => "text/css", :rel => "stylesheet", :href => "/style.css" }
-    %script{ :src => "http://static.paulboxley.com/jquery.js", :type => "text/javascript" }
-    %script{ :src => "http://static.paulboxley.com/jquery.masonry.js", :type => "text/javascript" }
+    %script{ :src => "http://static.paulboxley.com/javascript/jquery-1.6.3.min.js", :type => "text/javascript" }
+    %script{ :src => "http://static.paulboxley.com/javascript/jquery.masonry.min.js", :type => "text/javascript" }
+    %script{ :src => "http://static.paulboxley.com/javascript/jquery.infinitescroll.js", :type => "text/javascript" }
     /[if lte IE 8]
       %script{ :src => "http://static.paulboxley.com/html5.js", :type => "text/javascript" }
     /
@@ -34,11 +35,23 @@
       
     :javascript
       $(window).load(function(){
-        $('#wrapper').masonry({
+        $container = $('#wrapper');
+        $container.masonry({
           columnWidth: 300,
-          itemSelector: 'article',
-          animate: true
+          itemSelector: 'article'
         });
+        $container.infinitescroll(
+          {
+            navSelector: '#pages',
+            nextSelector: '#pages a.next-page',
+            itemSelector: '#wrapper'
+          },function(newElements){
+            var $newElems = $( newElements );
+            $newElems.imagesLoaded(function() {
+              $container.masonry('appended', $newElems, true);
+            });
+          }
+        );
       });
       var myfont_webfont_test = false;
       var woffEnabled = true;
@@ -52,3 +65,5 @@
         = haml :navigation, :layout => false
     #wrapper
       = yield
+    - if @content_type == :blog
+      = haml :pagination, :layout => false
