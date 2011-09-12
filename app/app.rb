@@ -44,17 +44,19 @@ def page ( page_name )
   page = Page.new(:name => page_name)
   @title = page.title
   @content = page.html
+  @content_type = :page
   haml :default
 end
 
 def blog ( options={} )
-  @display_type = case
+  @period = case
     when options[:name]  then :single
     when options[:month] then :month
     when options[:year]  then :year
     else :all
   end
-  puts "Display type: #{@display_type}"
+  puts "Period: #{@period}"
+  @content_type = :blog
   options[:page_size] ||= 10
   options[:page_number] ||= 1
   @current_page = options[:page_number] # The view needs this to build page nav links
@@ -64,7 +66,7 @@ def blog ( options={} )
   # but its impact seems to be negligible for now.
   # Should be cached with varnish anyway.
   all_posts = Post.list(options).sort { |a,b| b <=> a }
-  @posts = all_posts[first_post..last_post]
+  @posts = all_posts[first_post...last_post]
   @total_pages = (all_posts.length.to_f / options[:page_size].to_f).ceil
   if @posts.nil? or @posts.size == 0 then
     not_found

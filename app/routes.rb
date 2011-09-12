@@ -19,12 +19,6 @@ get '/blog/feed.atom' do
   feed :atom
 end
 
-get '/blog/page-:page' do
-  options = {}
-  options[:page_number] = params[:page].to_i
-  blog(options)
-end
-
 get %r{/blog(/[0-9]{4})?(/[0-9]{2})?(/[a-z0-9\-]+)?} do
   options = {}
   params[:captures] ||= []
@@ -32,6 +26,7 @@ get %r{/blog(/[0-9]{4})?(/[0-9]{2})?(/[a-z0-9\-]+)?} do
   options[:year]  = params[:captures][0]
   options[:month] = params[:captures][1]
   options[:name]  = params[:captures][2]
+  options[:page_number] = params[:page].to_i unless params[:page].nil?
   blog(options)
 end
 

@@ -1,0 +1,11 @@
+- unless @period == :single
+  #pages
+    = "On page #{@current_page} of #{@total_pages}"
+    - if @current_page > 1
+      %a{ :href => "?page=#{@current_page - 1}", :class => "prev-page" } 
+        = "Newer"
+    - if @current_page < @total_pages && @current_page > 1
+      &mdash;
+    - if @current_page < @total_pages
+      %a{ :href => "?page=#{@current_page + 1}", :class => "next-page" }
+        = "Older"
