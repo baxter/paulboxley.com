@@ -9,9 +9,11 @@
     ~ post.html          
     %span.permalink
       [
-      %a{ :href => post.tweet,     :title => "Tweet '#{post.title}'" } Tweet
+      %a{ :href => post.tweet,     :title => "Tweet about '#{post.title}'" }
+        = "Tweet<span> about '#{post.title}'</span>"
       ]
       &nbsp;
       [
-      %a{ :href => post.permalink, :title => "Permanent link to '#{post.title}'" } Permalink
+      %a{ :href => post.permalink, :title => "Permalink to '#{post.title}'" }
+        = "Permalink<span> to '#{post.title}'</span>"
       ]

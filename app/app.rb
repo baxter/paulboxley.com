@@ -8,7 +8,6 @@ require_relative 'models/post'
 require_relative 'routes'
 
 set :haml, { :format => :html5 }
-set :sass, { :style  => :expanded }
 
 set :public, Proc.new { File.join("content", "static") }
 
@@ -18,11 +17,13 @@ configure do
       :title => 'Paul Boxley - DEV',
       :base_url => 'http://localhost:9393/',
     }
+    set :sass, { :style  => :expanded }
   else
     Site = {
       :title => 'Paul Boxley',
       :base_url => 'http://paulboxley.com/',
     }
+    set :sass, { :style  => :compressed }
   end
 end
 
