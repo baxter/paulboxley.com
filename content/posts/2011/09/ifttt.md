@@ -1,5 +1,5 @@
 Title: If this then that
-Posted: 2011-09-28 13:06Z
+Posted: 2011-09-28 12:06Z
 URL: http://ifttt.com
 
 Ifttt is a website that lets you set up tasks of the form "If this then that" where "this" is a trigger and "that" is an action. Some popular tasks include:
