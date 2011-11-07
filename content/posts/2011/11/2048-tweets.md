@@ -174,7 +174,7 @@ Posted: 2011-11-05 23:54Z
   });
 </script>
 
-2<sup>11</sup> tweets! Hooray!
+[2<sup>11</sup> tweets][2048]! Hooray!
 
 It's been about a year since I hit [1,024 tweets][1024]. In that time a few things have changed; after four years working for the Forestry Commission I left to join the guys at ASMALLWORLD building and maintaining a huge Rails app.
 
@@ -250,6 +250,7 @@ I'm not sure if analysing my tweets is a normal thing to do. I'm pretty certain 
 Thank you to my Twitter followers/followees for a year full of `:)`, here's hoping for another 2,048 mostly happy tweets!
 
   [1024]: /blog/2010/10/1024-tweets
+  [2048]: https://twitter.com/#!/baxt3r/status/133645503639465984
   [scotrug]: http://scotrug.org/
   [gww]: http://wiki.guildwars.com/wiki/Main_Page
   [sof]: http://saveourforests.co.uk/
