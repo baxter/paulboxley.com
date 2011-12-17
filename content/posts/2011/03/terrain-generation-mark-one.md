@@ -11,7 +11,7 @@ I've also drawn polygons between the points to make the visualisation look a bit
 
 <script src="http://static.paulboxley.com/terrain-1/generate_terrain.js"></script>
 <script src="http://static.paulboxley.com/terrain-1/draw_terrain.js"></script>
-<script>$(window).load(function(){
+<script>$(document).ready(function(){
   initialise();
   draw();
 })</script>
