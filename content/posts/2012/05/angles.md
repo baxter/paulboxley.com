@@ -18,8 +18,8 @@ In javascript all angles use [radians][]. You may remember that there are 2π ra
 
 * 0 radians means you are pointing East
 * ½π radians means you are pointing South
-* -½π radians means you are pointing North
-* π or -π radians means you are pointing West
+* −½π radians means you are pointing North
+* π or −π radians means you are pointing West
 
 ![Examples of all the angles](http://static.paulboxley.com/angles.png)
 
@@ -37,42 +37,42 @@ As you can see, this boid is taking the long way around.
 
 ### What's going on?
 
-The boid stores its direction as a number which reflects the angle in radians that it should be facing. If it starts at +3.0 radians and we instruct it to move towards -3.0 radians then it will follow its simple instructions:
+The boid stores its direction as a number which reflects the angle in radians that it should be facing. If it starts at +3.0 radians and we instruct it to move towards −3.0 radians then it will follow its simple instructions:
 
-    If +3.0 > -3.0
+    If +3.0 > −3.0
       Decrease current direction angle
 
-+3.0 is greater than -3.0, so the boid decreases its current direction angle, moving from +3.0 to +2.9 to +2.8 to +2.7, which turns it anti-clockwise, going through the zero point and sending it the long way around.
++3.0 is greater than −3.0, so the boid decreases its current direction angle, moving from +3.0 to +2.9 to +2.8 to +2.7, which turns it anti-clockwise, going through the zero point and sending it the long way around.
 
-What we'd expect to see is the boid taking the short route between the two points, through π (remember +π and -π mean the same thing in this situation).
+What we'd expect to see is the boid taking the short route between the two points, through π (remember +π and −π mean the same thing in this situation).
 
 ### Why is this a problem?
 
 As far as bugs go this isn't the end of the world, but it results in some undesirable behaviour.
 
-If there are two boids, A and B, with directions of +3 and -3 respectively, when they come close to each other we would expect them to match directions, averaging to +π/-π (remember that +π and -π mean the same thing). What will actually happen is that the two boids will change direction away from each other, trying to average at 0, which is almost the opposite to the direction they're currently travelling in.
+If there are two boids, A and B, with directions of +3 and −3 respectively, when they come close to each other we would expect them to match directions, averaging to +π/−π (remember that +π and −π mean the same thing). What will actually happen is that the two boids will change direction away from each other, trying to average at 0, which is almost the opposite to the direction they're currently travelling in.
 
 In a more general sense it makes it far less likely that a flock of boids will end up moving in a Westward direction.
 
 ### How do we fix this problem?
 
-We need to treat the direction more intelligently. Rather than just treating it as a number we have to recognise that it's an angle and that +3.0 is actually closer to -3.0 than it is to 0.
+We need to treat the direction more intelligently. Rather than just treating it as a number we have to recognise that it's an angle and that +3.0 is actually closer to −3.0 than it is to 0.
 
 In order to find the difference between one angle and another we can say:
 
-    difference angle = end angle - start angle
+    difference angle = end angle − start angle
 
-But this only works if the two angles are either both North of 0 or both South of 0. If the two numbers are on opposite sides, say +2.0 and -2.0, then the result would be beyond either π or -π, in this case -4.0.
+But this only works if the two angles are either both North of 0 or both South of 0. If the two numbers are on opposite sides, say +2.0 and −2.0, then the result would be beyond either π or −π, in this case −4.0.
 
-We can easily fix this though: we know that a circle has 2π radians, and that in HTML 5 canvas the semi-circle from East to South to West goes from 0 to +π, and the semi-circle from East to North to West goes from 0 to -π, so once we go beyond either π or -π we can just subtract or add 2π to that number to get a more reasonable number.
+We can easily fix this though: we know that a circle has 2π radians, and that in HTML 5 canvas the semi-circle from East to South to West goes from 0 to +π, and the semi-circle from East to North to West goes from 0 to −π, so once we go beyond either π or −π we can just subtract or add 2π to that number to get a more reasonable number.
 
-    difference angle = end angle - start angle
+    difference angle = end angle − start angle
     if difference angle > π
-      difference angle = difference angle - 2π
-    if difference angle < -π
+      difference angle = difference angle − 2π
+    if difference angle < −π
       difference angle = difference angle + 2π
 
-Now the result of passing in +2.0 and -2.0 will return around 2.28
+Now the result of passing in +2.0 and −2.0 will return around 2.28
 
     Find difference between current direction and target direction
     If the difference < 0
