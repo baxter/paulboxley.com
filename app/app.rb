@@ -43,10 +43,14 @@ end
 
 def page ( page_name )
   page = Page.new(:name => page_name)
-  @title = page.title
-  @content = page.html
-  @content_type = :page
-  haml :default
+  if page.metadata('redirect')
+    redirect page.metadata('redirect'), 302
+  else
+    @title = page.title
+    @content = page.html
+    @content_type = :page
+    haml :default
+  end
 end
 
 def blog ( options={} )
